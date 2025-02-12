@@ -47,7 +47,7 @@ void CSearchTree::addElement(int iElement)
 {
     if (getARBElement() == iElement)
     {
-        throw CException(ExceptionCode::DUPLICATE_ELEMENT, "The element already exists in the tree.");
+        throw CException(ExceptionCode::DUPLICATE_ELEMENT, "CSearchTree::addElement : The element already exists in the tree.");
     }
     else if (getARBElement() > iElement)
     {
@@ -84,7 +84,7 @@ void CSearchTree::removeElement(int iElement)
 {
     if (!isInArbre(iElement))
     {
-        throw CException(ExceptionCode::ELEMENT_NOT_FOUND, "The element does not exist in the tree.");
+        throw CException(ExceptionCode::ELEMENT_NOT_FOUND, "CSearchTree::removeElement : The element does not exist in the tree.");
     }
 
     if (getARBElement() == iElement)
@@ -158,7 +158,7 @@ CBinaryTree * CSearchTree::searchElement(int iElement) const
 {
     if (getARBElement() == iElement)
     {
-        return const_cast<CSearchTree *>(this);
+        return (CSearchTree *) this;
     }
     else if (getARBElement() > iElement)
     {
@@ -175,5 +175,5 @@ CBinaryTree * CSearchTree::searchElement(int iElement) const
         }
     }
 
-    throw CException(ExceptionCode::ELEMENT_NOT_FOUND, "The element does not exist in the tree.");
+    throw CException(ExceptionCode::ELEMENT_NOT_FOUND, "CSearchTree::searchElement : The element does not exist in the tree.");
 }

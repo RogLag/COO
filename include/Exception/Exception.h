@@ -9,7 +9,7 @@
 
 /**
  * @enum ExceptionCode
- * @brief Enum for exception codes with logical codes and titles.
+ * @brief Enum for exception codes with a non exhaustive list of possible values.
  */
 enum class ExceptionCode {
     ELEMENT_NOT_FOUND = 1, ///< Element not found in the tree.
@@ -26,7 +26,6 @@ class CException
     /* Attributes */
     private:
         ExceptionCode uiEXCCode; ///< Exception code.
-        std::string sEXCTitle; ///< Exception title.
         std::string sEXCDescription; ///< Exception description.
 
         /**
@@ -78,14 +77,6 @@ class CException
         [[nodiscard]] ExceptionCode getEXCCode() const { return uiEXCCode; };
 
         /**
-         * @brief Get the exception title.
-         * @return The exception title.
-         * @pre None.
-         * @post Returns the exception title.
-         */
-        [[nodiscard]] std::string getEXCTitle() const { return sEXCTitle; };
-
-        /**
          * @brief Get the exception description.
          * @return The exception description.
          * @pre None.
@@ -99,15 +90,7 @@ class CException
          * @pre None.
          * @post The exception code is set to uiCode.
          */
-        void setEXCCode(ExceptionCode uiCode) { uiEXCCode = uiCode; sEXCTitle = getDefaultTitle(uiCode); };
-
-        /**
-         * @brief Set the exception title.
-         * @param sTitle The exception title.
-         * @pre None.
-         * @post The exception title is set to sTitle.
-         */
-        void setEXCTitle(const std::string & sTitle) { sEXCTitle = sTitle; };
+        void setEXCCode(ExceptionCode uiCode) { uiEXCCode = uiCode; };
 
         /**
          * @brief Set the exception description.

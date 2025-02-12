@@ -7,11 +7,11 @@ int main()
 {
     try
     {
-        const CException Exception(ExceptionCode::INVALID_OPERATION, "This is a test");
+        const CException Exception(ExceptionCode::INVALID_OPERATION, "main : This is a test for INVALID_OPERATION");
         Exception.display();
-        const CException Exception2(ExceptionCode::DUPLICATE_ELEMENT, "This is another test");
+        const CException Exception2(ExceptionCode::DUPLICATE_ELEMENT, "main : This is a second test for DUPLICATE_ELEMENT");
         Exception2.display();
-        const CException Exception3(ExceptionCode::ELEMENT_NOT_FOUND, "This is a third test");
+        const CException Exception3(ExceptionCode::ELEMENT_NOT_FOUND, "main : This is a third test for ELEMENT_NOT_FOUND");
         Exception3.display();
 
         CSearchTree Tree(5);
@@ -29,6 +29,8 @@ int main()
 
         std::cout << "Is 3 in the tree? " << Tree.isInArbre(3) << std::endl;
         std::cout << "Is 2 in the tree? " << Tree.isInArbre(2) << std::endl;
+
+        Tree.searchElement(3);
     }
     catch (const CException & e)
     {

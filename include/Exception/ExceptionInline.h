@@ -5,21 +5,18 @@
 inline CException::CException()
 {
     uiEXCCode = ExceptionCode::INVALID_OPERATION;
-    sEXCTitle = getDefaultTitle(uiEXCCode);
     sEXCDescription = "";
 }
 
 inline CException::CException(const CException & EXCException)
 {
     uiEXCCode = EXCException.uiEXCCode;
-    sEXCTitle = EXCException.sEXCTitle;
     sEXCDescription = EXCException.sEXCDescription;
 }
 
 inline CException::CException(ExceptionCode uiCode, const std::string & sDescription)
 {
     uiEXCCode = uiCode;
-    sEXCTitle = getDefaultTitle(uiCode);
     sEXCDescription = sDescription;
 }
 
