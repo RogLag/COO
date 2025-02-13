@@ -52,19 +52,19 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/hugor/CLionProjects/Arbres/include"
+					"path" : "C:/Users/hugor/CLionProjects/COO/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/hugor/CLionProjects/Arbres/include/Exception"
+					"path" : "C:/Users/hugor/CLionProjects/COO/include/Exception"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/hugor/CLionProjects/Arbres/include/ArbreBinaire"
+					"path" : "C:/Users/hugor/CLionProjects/COO/include/ArbreBinaire"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/hugor/CLionProjects/Arbres/include/ArbreRecherche"
+					"path" : "C:/Users/hugor/CLionProjects/COO/include/ArbreRecherche"
 				}
 			],
 			"language" : "CXX",

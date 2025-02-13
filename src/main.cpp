@@ -30,7 +30,9 @@ int main()
         std::cout << "Is 3 in the tree? " << Tree.isInArbre(3) << std::endl;
         std::cout << "Is 2 in the tree? " << Tree.isInArbre(2) << std::endl;
 
-        Tree.searchElement(3);
+        const CBinaryTree * search = Tree.searchElement(3);
+
+        std::cout << search << std::endl;
     }
     catch (const CException & e)
     {

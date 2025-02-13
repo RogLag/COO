@@ -1,0 +1,3 @@
+C:\Users\hugor\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\COO.dir/objects.a
+C:\Users\hugor\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\COO.dir/objects.a @CMakeFiles\COO.dir\objects1.rsp
+C:\Users\hugor\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\COO.dir/objects.a -Wl,--no-whole-archive -o COO.exe -Wl,--out-implib,libCOO.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\COO.dir\linkLibs.rsp
