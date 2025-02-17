@@ -1,85 +1,111 @@
-//
-// Created by Hugo on 12/02/2025.
-//
-
 #ifndef ARBRERECHERCHE_H
 #define ARBRERECHERCHE_H
 
 #include "ArbreBinaire.h"
 
-/**
- * @class CSearchTree
- * @brief Class for a binary search tree.
+/***************************************************
+ * CLASSE: CSearchTree
+ * *************************************************
+ * ROLE: Classe qui permet de représenter un arbre
+ *     binaire de recherche.
+ * *************************************************
+ * AUTHOR: Hugo MERY
+ * DATE: 12/02/2025
+ * ************************************************/
+
+/*
+ * TYPES:
+ * Pas de types spécifiques à déclarer.
  */
+
+/*
+ * VARIABLES:
+ * Pas de variables globales spécifiques à déclarer.
+ */
+
 class CSearchTree : public CBinaryTree
 {
     /* Methods */
     public:
-        /**
-         * @brief Default constructor.
-         * @pre None.
-         * @post A new search tree is created with default values.
-         */
+        /*********************************************
+         * METHOD: CSearchTree
+         * *******************************************
+         * ENTREE: Rien.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Un nouvel arbre de recherche est créé.
+         *********************************************/
         CSearchTree();
 
-        /**
-         * @brief Copy constructor.
-         * @param ARBArbre The search tree to copy.
-         * @pre ARBArbre must be a valid CSearchTree object.
-         * @post A new search tree is created as a copy of ARBArbre.
-         */
+        /*********************************************
+         * METHOD: CSearchTree
+         * *******************************************
+         * ENTREE: ARBArbre, l'arbre de recherche à copier.
+         * NECESSITE: ARBArbre doit être un objet valide de CSearchTree.
+         * SORTIE: Rien.
+         * ENTRAINE: Un nouvel arbre de recherche est créé comme copie de ARBArbre.
+         *********************************************/
         CSearchTree(const CSearchTree & ARBArbre);
 
-        /**
-         * @brief Parameterized constructor.
-         * @param iElement The root element of the search tree.
-         * @pre None.
-         * @post A new search tree is created with the given root element.
-         */
+        /*********************************************
+         * METHOD: CSearchTree
+         * *******************************************
+         * ENTREE: iElement, l'élément racine de l'arbre de recherche.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Un nouvel arbre de recherche est créé avec l'élément racine donné.
+         *********************************************/
         explicit CSearchTree(int iElement);
 
-        /**
-         * @brief Destructor.
-         * @pre None.
-         * @post The search tree is destroyed.
-         */
+        /*********************************************
+         * METHOD: ~CSearchTree
+         * *******************************************
+         * ENTREE: Rien.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: L'arbre de recherche est détruit.
+         *********************************************/
         ~CSearchTree() override;
 
-        /**
-         * @brief Check if an element is in the tree.
-         * @param iElement The element to search for.
-         * @return True if the element is in the tree, false otherwise.
-         * @pre None.
-         * @post Returns true if the element is found, false otherwise.
-         */
+        /*********************************************
+         * METHOD: isInArbre
+         * *******************************************
+         * ENTREE: iElement, l'élément à rechercher.
+         * NECESSITE: Rien.
+         * SORTIE: Un booléen.
+         * ENTRAINE: Retourne vrai si l'élément est dans l'arbre, faux sinon.
+         *********************************************/
         [[nodiscard]] bool isInArbre(int iElement) const override;
 
-        /**
-         * @brief Add an element to the tree.
-         * @param iElement The element to add.
-         * @pre None.
-         * @post The element is added to the tree.
-         * @throws CException if the element already exists in the tree.
-         */
+        /*********************************************
+         * METHOD: addElement
+         * *******************************************
+         * ENTREE: iElement, l'élément à ajouter.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Ajoute l'élément à l'arbre.
+         *           Lève une exception si l'élément est déjà présent.
+         *********************************************/
         void addElement(int iElement) override;
 
-        /**
-         * @brief Remove an element from the tree.
-         * @param iElement The element to remove.
-         * @pre None.
-         * @post The element is removed from the tree.
-         * @throws CException if the element does not exist in the tree.
-         */
+        /*********************************************
+         * METHOD: removeElement
+         * *******************************************
+         * ENTREE: iElement, l'élément à supprimer.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Supprime l'élément de l'arbre.
+         *********************************************/
         void removeElement(int iElement) override;
 
-        /**
-         * @brief Search for an element in the tree.
-         * @param iElement The element to search for.
-         * @return A pointer to the node containing the element, or nullptr if not found.
-         * @pre None.
-         * @post Returns a pointer to the node containing the element, or nullptr if not found.
-         * @throws CException if the element does not exist in the tree.
-         */
+        /*********************************************
+         * METHOD: searchElement
+         * *******************************************
+         * ENTREE: iElement, l'élément à rechercher.
+         * NECESSITE: Rien.
+         * SORTIE: Un pointeur sur l'élément recherché.
+         * ENTRAINE: Retourne un pointeur sur l'élément recherché.
+         *********************************************/
         [[nodiscard]] CBinaryTree * searchElement(int iElement) const override;
 };
 

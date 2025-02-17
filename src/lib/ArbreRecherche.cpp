@@ -5,13 +5,14 @@
 #include "ArbreRecherche.h"
 #include "Exception.h"
 
-/**
- * @brief Check if an element is in the tree.
- * @param iElement The element to search for.
- * @return True if the element is in the tree, false otherwise.
- * @pre None.
- * @post Returns true if the element is found, false otherwise.
- */
+/*********************************************
+ * METHOD: isInArbre
+ * *******************************************
+ * ENTREE: iElement, l'élément à rechercher.
+ * NECESSITE: Rien.
+ * SORTIE: Un booléen.
+ * ENTRAINE: Retourne vrai si l'élément est dans l'arbre, faux sinon.
+ *********************************************/
 bool CSearchTree::isInArbre(int iElement) const
 {
     if (getARBElement() == iElement)
@@ -36,13 +37,15 @@ bool CSearchTree::isInArbre(int iElement) const
     return false;
 }
 
-/**
- * @brief Add an element to the tree.
- * @param iElement The element to add.
- * @pre None.
- * @post The element is added to the tree.
- * @throws CException if the element already exists in the tree.
- */
+/*********************************************
+ * METHOD: addElement
+ * *******************************************
+ * ENTREE: iElement, l'élément à ajouter.
+ * NECESSITE: Rien.
+ * SORTIE: Rien.
+ * ENTRAINE: Ajoute l'élément à l'arbre.
+ *           Lève une exception si l'élément est déjà présent.
+ *********************************************/
 void CSearchTree::addElement(int iElement)
 {
     if (getARBElement() == iElement)
@@ -73,13 +76,14 @@ void CSearchTree::addElement(int iElement)
     }
 }
 
-/**
- * @brief Remove an element from the tree.
- * @param iElement The element to remove.
- * @pre None.
- * @post The element is removed from the tree.
- * @throws CException if the element does not exist in the tree.
- */
+/*********************************************
+ * METHOD: removeElement
+ * *******************************************
+ * ENTREE: iElement, l'élément à supprimer.
+ * NECESSITE: Rien.
+ * SORTIE: Rien.
+ * ENTRAINE: Supprime l'élément de l'arbre.
+ *********************************************/
 void CSearchTree::removeElement(int iElement)
 {
     if (!isInArbre(iElement))
@@ -146,14 +150,14 @@ void CSearchTree::removeElement(int iElement)
     }
 }
 
-/**
- * @brief Search for an element in the tree.
- * @param iElement The element to search for.
- * @return A pointer to the node containing the element, or nullptr if not found.
- * @pre None.
- * @post Returns a pointer to the node containing the element, or nullptr if not found.
- * @throws CException if the element does not exist in the tree.
- */
+/*********************************************
+ * METHOD: searchElement
+ * *******************************************
+ * ENTREE: iElement, l'élément à rechercher.
+ * NECESSITE: Rien.
+ * SORTIE: Un pointeur sur l'élément recherché.
+ * ENTRAINE: Retourne un pointeur sur l'élément recherché.
+ *********************************************/
 CBinaryTree * CSearchTree::searchElement(int iElement) const
 {
     if (getARBElement() == iElement)

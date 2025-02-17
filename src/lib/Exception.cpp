@@ -5,6 +5,14 @@
 #include "Exception.h"
 #include <iostream>
 
+/*********************************************
+ * METHOD: display
+ * *******************************************
+ * ENTREE: Rien.
+ * NECESSITE: Rien.
+ * SORTIE: Rien.
+ * ENTRAINE: Les détails de l'exception sont affichés sur la console.
+ *********************************************/
 void CException::display() const
 {
     std::endl(std::cout);
