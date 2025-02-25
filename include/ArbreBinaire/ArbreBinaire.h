@@ -128,14 +128,14 @@ class CBinaryTree
 
 
         /*********************************************************************
-         * METHOD: isInArbre
+         * METHOD: isInTree
          * *******************************************************************
          * ENTREE: iElement, l'élément à rechercher.
          * NECESSITE: Rien.
          * SORTIE: Un booléen.
          * ENTRAINE: Retourne vrai si l'élément est dans l'arbre, faux sinon.
          *********************************************************************/
-        [[nodiscard]] virtual bool isInArbre(int iElement) const = 0;
+        [[nodiscard]] virtual bool isInTree(int iElement) const = 0;
 
         /*********************************************************************
          * METHOD: addElement

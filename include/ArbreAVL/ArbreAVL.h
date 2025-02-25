@@ -1,13 +1,17 @@
-#ifndef ARBRERECHERCHE_H
-#define ARBRERECHERCHE_H
+//
+// Created by Hugo on 24/02/2025.
+//
+
+#ifndef ARBREAVL_H
+#define ARBREAVL_H
 
 #include "ArbreBinaire.h"
 
 /***************************************************
- * CLASSE: CSearchTree
+ * CLASSE: CAVLTree
  * *************************************************
  * ROLE: Classe qui permet de représenter un arbre
- *     binaire de recherche.
+ *     AVL.
  * *************************************************
  * AUTHOR: Hugo MERY
  * DATE: 12/02/2025
@@ -23,49 +27,49 @@
  * Pas de variables globales spécifiques à déclarer.
  */
 
-class CSearchTree : public CBinaryTree
+class CAVLTree : public CBinaryTree
 {
     /* Methods */
     public:
         /*********************************************
-         * METHOD: CSearchTree
+         * METHOD: CAVLTree
          * *******************************************
          * ENTREE: Rien.
          * NECESSITE: Rien.
          * SORTIE: Rien.
-         * ENTRAINE: Un nouvel arbre de recherche est créé.
+         * ENTRAINE: Un nouvel arbre AVL est créé.
          *********************************************/
-        CSearchTree();
+        CAVLTree();
 
         /*********************************************
-         * METHOD: CSearchTree
+         * METHOD: CAVLTree
          * *******************************************
-         * ENTREE: ARBArbre, l'arbre de recherche à copier.
-         * NECESSITE: ARBArbre doit être un objet valide de CSearchTree.
+         * ENTREE: ARBArbre, l'arbre AVL à copier.
+         * NECESSITE: ARBArbre doit être un objet valide de CAVLTree.
          * SORTIE: Rien.
-         * ENTRAINE: Un nouvel arbre de recherche est créé comme copie de ARBArbre.
+         * ENTRAINE: Un nouvel arbre AVL est créé comme copie de ARBArbre.
          *********************************************/
-        CSearchTree(const CSearchTree & ARBArbre);
+        CAVLTree(const CAVLTree & ARBArbre);
 
         /*********************************************
-         * METHOD: CSearchTree
+         * METHOD: CAVLTree
          * *******************************************
-         * ENTREE: iElement, l'élément racine de l'arbre de recherche.
+         * ENTREE: iElement, l'élément racine de l'arbre AVL.
          * NECESSITE: Rien.
          * SORTIE: Rien.
-         * ENTRAINE: Un nouvel arbre de recherche est créé avec l'élément racine donné.
+         * ENTRAINE: Un nouvel arbre AVL est créé avec l'élément racine donné.
          *********************************************/
-        explicit CSearchTree(int iElement);
+        explicit CAVLTree(int iElement);
 
         /*********************************************
-         * METHOD: ~CSearchTree
+         * METHOD: ~CAVLTree
          * *******************************************
          * ENTREE: Rien.
          * NECESSITE: Rien.
          * SORTIE: Rien.
-         * ENTRAINE: L'arbre de recherche est détruit.
+         * ENTRAINE: L'arbre AVL est détruit.
          *********************************************/
-        ~CSearchTree() override;
+        ~CAVLTree() override;
 
         /*********************************************
          * METHOD: isInTree
@@ -109,6 +113,4 @@ class CSearchTree : public CBinaryTree
         [[nodiscard]] CBinaryTree * searchElement(int iElement) const override;
 };
 
-#include "ArbreRechercheInline.h"
-
-#endif //ARBRERECHERCHE_H
+#endif //ARBREAVL_H

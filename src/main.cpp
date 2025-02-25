@@ -21,14 +21,14 @@ int main()
         Tree.addElement(4);
         Tree.addElement(7);
 
-        std::cout << "Is 3 in the tree? " << Tree.isInArbre(3) << std::endl;
-        std::cout << "Is 8 in the tree? " << Tree.isInArbre(8) << std::endl;
-        std::cout << "Is 9 in the tree? " << Tree.isInArbre(9) << std::endl;
+        std::cout << "Is 3 in the tree? " << Tree.isInTree(3) << std::endl;
+        std::cout << "Is 8 in the tree? " << Tree.isInTree(8) << std::endl;
+        std::cout << "Is 9 in the tree? " << Tree.isInTree(9) << std::endl;
 
         Tree.removeElement(3);
 
-        std::cout << "Is 3 in the tree? " << Tree.isInArbre(3) << std::endl;
-        std::cout << "Is 2 in the tree? " << Tree.isInArbre(2) << std::endl;
+        std::cout << "Is 3 in the tree? " << Tree.isInTree(3) << std::endl;
+        std::cout << "Is 2 in the tree? " << Tree.isInTree(2) << std::endl;
 
         const CBinaryTree * search = Tree.searchElement(3);
 

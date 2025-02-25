@@ -24,8 +24,24 @@ inline CSearchTree::CSearchTree()
 inline CSearchTree::CSearchTree(const CSearchTree & ARBArbre)
 {
     setARBElement(ARBArbre.getARBElement());
-    setARBGauche(ARBArbre.getARBGauche());
-    setARBDroit(ARBArbre.getARBDroit());
+    
+    if (ARBArbre.getARBGauche() != nullptr)
+    {
+        setARBGauche(new CSearchTree(*(static_cast<CSearchTree*>(ARBArbre.getARBGauche()))));
+    }
+    else
+    {
+        setARBGauche(nullptr);
+    }
+
+    if (ARBArbre.getARBDroit() != nullptr)
+    {
+        setARBDroit(new CSearchTree(*(static_cast<CSearchTree*>(ARBArbre.getARBDroit()))));
+    }
+    else
+    {
+        setARBDroit(nullptr);
+    }
 }
 
 /*********************************************
