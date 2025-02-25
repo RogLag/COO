@@ -71,12 +71,12 @@ inline CSearchTree::~CSearchTree()
 {
     if (getARBGauche() != nullptr)
     {
-        delete getARBGauche();
+        delete (CSearchTree*)getARBGauche();
     }
 
     if (getARBDroit() != nullptr)
     {
-        delete getARBDroit();
+        delete (CSearchTree*)getARBDroit();
     }
 }
 
