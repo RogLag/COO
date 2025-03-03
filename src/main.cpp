@@ -1,5 +1,6 @@
 #include "Exception.h"
 #include "ArbreRecherche.h"
+#include "ArbreAVL.h"
 
 #include <iostream>
 
@@ -30,9 +31,27 @@ int main()
         std::cout << "Is 3 in the tree? " << Tree.isInTree(3) << std::endl;
         std::cout << "Is 2 in the tree? " << Tree.isInTree(2) << std::endl;
 
-        const CBinaryTree * search = Tree.searchElement(3);
+        std::cout << "--------------------------------" << std::endl;
 
-        std::cout << search << std::endl;
+        CAVLTree Tree2(5);
+        Tree2.addElement(3);
+        Tree2.addElement(8);
+        Tree2.addElement(2);
+        Tree2.addElement(4);
+        Tree2.addElement(7);
+
+        std::cout << "Is 3 in the tree? " << Tree2.isInTree(3) << std::endl;
+        std::cout << "Is 8 in the tree? " << Tree2.isInTree(8) << std::endl;
+        std::cout << "Is 9 in the tree? " << Tree2.isInTree(9) << std::endl;
+
+        Tree2.removeElement(3);
+
+        std::cout << "Is 3 in the tree? " << Tree2.isInTree(3) << std::endl;
+        std::cout << "Is 2 in the tree? " << Tree2.isInTree(2) << std::endl;
+
+        const CBinaryTree * search2 = Tree2.searchElement(3);
+
+        std::cout << search2 << std::endl;
     }
     catch (const CException & e)
     {

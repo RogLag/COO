@@ -30,6 +30,41 @@
 class CAVLTree : public CBinaryTree
 {
     /* Methods */
+    private:
+      	/*********************************************
+         * METHOD: balanceTree
+         * *******************************************
+         * ENTREE: Rien.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Equilibre l'arbre AVL.
+         *********************************************/
+        void balanceTree();
+
+        bool checkBalance() const;
+
+        int getHeight() const;
+
+        /*********************************************
+         * METHOD: rotateLeft
+         * *******************************************
+         * ENTREE: Rien.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Fais une rotation à gauche.
+         *********************************************/
+        void rotateLeft();
+
+        /*********************************************
+         * METHOD: rotateRight
+         * *******************************************
+         * ENTREE: Rien.
+         * NECESSITE: Rien.
+         * SORTIE: Rien.
+         * ENTRAINE: Fais une rotation à droite.
+         *********************************************/
+        void rotateRight();
+
     public:
         /*********************************************
          * METHOD: CAVLTree
@@ -112,5 +147,7 @@ class CAVLTree : public CBinaryTree
          *********************************************/
         [[nodiscard]] CBinaryTree * searchElement(int iElement) const override;
 };
+
+#include "ArbreAVLInline.h"
 
 #endif //ARBREAVL_H

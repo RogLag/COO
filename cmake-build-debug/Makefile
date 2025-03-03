@@ -128,6 +128,30 @@ Arbres/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arbres.dir\build.make CMakeFiles/Arbres.dir/build
 .PHONY : Arbres/fast
 
+src/lib/ArbreAVL.obj: src/lib/ArbreAVL.cpp.obj
+.PHONY : src/lib/ArbreAVL.obj
+
+# target to build an object file
+src/lib/ArbreAVL.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arbres.dir\build.make CMakeFiles/Arbres.dir/src/lib/ArbreAVL.cpp.obj
+.PHONY : src/lib/ArbreAVL.cpp.obj
+
+src/lib/ArbreAVL.i: src/lib/ArbreAVL.cpp.i
+.PHONY : src/lib/ArbreAVL.i
+
+# target to preprocess a source file
+src/lib/ArbreAVL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arbres.dir\build.make CMakeFiles/Arbres.dir/src/lib/ArbreAVL.cpp.i
+.PHONY : src/lib/ArbreAVL.cpp.i
+
+src/lib/ArbreAVL.s: src/lib/ArbreAVL.cpp.s
+.PHONY : src/lib/ArbreAVL.s
+
+# target to generate assembly for a file
+src/lib/ArbreAVL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arbres.dir\build.make CMakeFiles/Arbres.dir/src/lib/ArbreAVL.cpp.s
+.PHONY : src/lib/ArbreAVL.cpp.s
+
 src/lib/ArbreRecherche.obj: src/lib/ArbreRecherche.cpp.obj
 .PHONY : src/lib/ArbreRecherche.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Arbres
+	@echo ... src/lib/ArbreAVL.obj
+	@echo ... src/lib/ArbreAVL.i
+	@echo ... src/lib/ArbreAVL.s
 	@echo ... src/lib/ArbreRecherche.obj
 	@echo ... src/lib/ArbreRecherche.i
 	@echo ... src/lib/ArbreRecherche.s
