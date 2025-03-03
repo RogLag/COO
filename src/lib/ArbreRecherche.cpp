@@ -6,14 +6,14 @@
 #include "Exception.h"
 
 /*********************************************
- * METHOD: isInArbre
+ * METHOD: isInTree
  * *******************************************
  * ENTREE: iElement, l'élément à rechercher.
  * NECESSITE: Rien.
  * SORTIE: Un booléen.
  * ENTRAINE: Retourne vrai si l'élément est dans l'arbre, faux sinon.
  *********************************************/
-bool CSearchTree::isInArbre(int iElement) const
+bool CSearchTree::isInTree(int iElement) const
 {
     if (getARBElement() == iElement)
     {
@@ -23,14 +23,14 @@ bool CSearchTree::isInArbre(int iElement) const
     {
         if (getARBGauche() != nullptr)
         {
-            return getARBGauche()->isInArbre(iElement);
+            return getARBGauche()->isInTree(iElement);
         }
     }
     else
     {
         if (getARBDroit() != nullptr)
         {
-            return getARBDroit()->isInArbre(iElement);
+            return getARBDroit()->isInTree(iElement);
         }
     }
 
@@ -86,7 +86,7 @@ void CSearchTree::addElement(int iElement)
  *********************************************/
 void CSearchTree::removeElement(int iElement)
 {
-    if (!isInArbre(iElement))
+    if (!isInTree(iElement))
     {
         throw CException(ExceptionCode::ELEMENT_NOT_FOUND, "CSearchTree::removeElement : The element does not exist in the tree.");
     }
