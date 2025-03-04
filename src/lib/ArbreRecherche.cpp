@@ -100,8 +100,7 @@ void CSearchTree::removeElement(int iElement)
                 CBinaryTree * pTemp = getARBGauche()->getARBDroit();
                 setARBElement(pTemp->getARBElement());
                 getARBGauche()->setARBDroit(pTemp->getARBGauche());
-                getARBGauche()->setARBGauche(pTemp->getARBGauche());
-                delete pTemp;
+                delete pTemp->getARBGauche();
             }
             else
             {
@@ -118,8 +117,7 @@ void CSearchTree::removeElement(int iElement)
                 CBinaryTree * pTemp = getARBDroit()->getARBGauche();
                 setARBElement(pTemp->getARBElement());
                 getARBDroit()->setARBGauche(pTemp->getARBDroit());
-                getARBDroit()->setARBDroit(pTemp->getARBDroit());
-                delete pTemp;
+                delete pTemp->getARBDroit();
             }
             else
             {
